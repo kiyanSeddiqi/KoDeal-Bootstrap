@@ -1,0 +1,181 @@
+// Color
+$primary: #004e98;
+$secondary: #ff6700;
+$dark: #252422;
+$body-color: #444;
+$light: #f7f7f7;
+$black: #0f1113;
+$link-color: #7b7b7c;
+$border-color: #eee;
+$layer: rgba(0, 0, 0, 0.55);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $dark,
+  "light": $light,
+  "black": $black,
+  "gray": $link-color,
+  "border-color": $border-color,
+  "layer": $layer,
+) !default;
+
+// Typography
+$font-family-sans-serif: "Hind Siliguri", sans-serif;
+$font-size-base: 0.625rem;
+$h1-font-size: $font-size-base * 5 !default;
+$h2-font-size: $font-size-base * 3.8 !default;
+$h3-font-size: $font-size-base * 2.4 !default;
+$h4-font-size: $font-size-base * 2.2 !default;
+$h5-font-size: $font-size-base * 1.8 !default;
+$h6-font-size: $font-size-base * 1.6 !default;
+
+// Spacing
+$spacer: 0.625rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.8,
+  2: $spacer * 1.2,
+  3: $spacer * 1.4,
+  4: $spacer * 1.6,
+  5: $spacer * 2,
+  6: $spacer * 2.4,
+  7: $spacer * 3.2,
+  8: $spacer * 4,
+  9: $spacer * 4.8,
+) !default;
+$paragraph-margin-bottom: 0;
+
+// Navbar
+$nav-link-font-weight: 600;
+$navbar-light-color: #fff;
+$navbar-light-hover-color: $secondary;
+$navbar-light-active-color: $secondary;
+$navbar-toggler-padding-y: 0.5rem;
+$navbar-toggler-padding-x: 0.5rem;
+$navbar-toggler-font-size: 16px;
+$navbar-toggler-border-radius: 4px;
+$navbar-toggler-focus-width: 0;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-hover-color: $primary;
+$dropdown-font-size: 1rem;
+$dropdown-link-color: $dark;
+$dropdown-spacer: 10px;
+
+// Buttons
+$btn-font-size: 1rem;
+$btn-font-weight: 700;
+$button-radius: 6px;
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+$btn-padding-y: 18px;
+$btn-padding-x: 34px;
+$btn-padding-y-lg: $btn-padding-y;
+$btn-padding-x-lg: $btn-padding-x;
+$btn-line-height: 1;
+
+//Breadcrumb
+$breadcrumb-divider: none;
+$breadcrumb-bg: rgba(255, 255, 255, 0.18);
+
+// Pagination
+$pagination-padding-y: 10px;
+$pagination-padding-x: 20px;
+$pagination-font-size: 1rem;
+$pagination-color: $body-color;
+$pagination-hover-color: #fff;
+$pagination-hover-bg: $secondary;
+$pagination-active-color: #fff;
+$pagination-active-bg: $secondary;
+$pagination-border-radius: 6px;
+
+// Containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1200px,
+) !default;
+$container-padding-x: 30px;
+
+// Accordion
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: #fff;
+$accordion-button-focus-box-shadow: none;
+$accordion-icon-width: 1.375rem;
+$accordion-button-icon: none;
+$accordion-button-active-icon: none;
+$accordion-button-icon-dark: none;
+$accordion-button-active-icon-dark: none;
+
+// Options:
+$enable-rfs: false;
+$enable-negative-margins: true;
+$box-shadow-sm: 0 0 0.7rem rgba($black, 0.3);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Dark mode colors
+@include color-mode(dark) {
+  --bs-primary: #0479e9;
+  --bs-dark: #eee;
+  --bs-body-color: #afafaf;
+  --bs-light: #272727;
+  --bs-layer: rgba(0, 0, 0, 0.75);
+  --bs-body-bg: #232220;
+  --bs-border-color: #fff3;
+
+  .text-primary {
+    color: var(--bs-primary) !important;
+  }
+  .btn-primary {
+    background-color: var(--bs-primary);
+    &:hover {
+      background-color: #004e98 !important;
+      border-color: #004e98;
+    }
+  }
+  .sticky .navbar__login-btn:hover {
+    background-color: #004e98 !important;
+    border-color: #004e98;
+  }
+
+  .cta .btn-outline-primary {
+    background-color: #fff !important;
+  }
+
+  .text-dark {
+    color: var(--bs-dark) !important;
+  }
+
+  .btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    &:hover {
+      background-color: var(--bs-primary);
+      color: #fff;
+    }
+  }
+  .dropdown-item {
+    color: var(--bs-dark);
+    &:hover {
+      color: var(--bs-primary);
+    }
+  }
+
+  .bg-light {
+    background-color: var(--bs-light) !important;
+  }
+  .bg-white {
+    background-color: var(--bs-body-bg) !important;
+  }
+
+  .pagination .page-item:not(.active) .page-link {
+    color: var(--bs-body-color);
+    &:hover {
+      color: #fff;
+    }
+  }
+}

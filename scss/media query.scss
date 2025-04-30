@@ -1,0 +1,170 @@
+// Max width 992px
+@media (max-width: 62em) {
+  .heading-secondary {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+  .navbar {
+    &-collapse {
+      & .nav-link {
+        color: var(--bs-dark);
+      }
+      text-align: center !important;
+      background: var(--bs-body-bg) !important;
+      border: 1px solid var(--bs-border-color);
+      border-radius: 4px;
+    }
+
+    // Change hamburger menu icon
+    & .navbar-toggler[aria-expanded="true"] {
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z'/%3E%3C/svg%3E");
+      }
+    }
+    & .navbar-toggler[aria-expanded="false"] {
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
+      }
+    }
+    &__login-btn {
+      border: 2px solid var(--bs-primary) !important;
+    }
+
+    &__search-icon {
+      background: var(--bs-primary);
+    }
+
+    & .theme__container {
+      position: absolute;
+      right: 65px;
+      top: 5px;
+    }
+
+    .dropdown-menu {
+      text-align: center;
+      &::after {
+        left: 50%;
+      }
+    }
+  }
+
+  .sticky {
+    box-shadow: var(--bs-box-shadow-sm);
+    opacity: 0.9;
+  }
+
+  .triple {
+    &__title {
+      font-size: 28px;
+    }
+  }
+
+  .story__stats {
+    margin-top: 32px;
+  }
+
+  .video {
+    margin-bottom: 0;
+    padding-bottom: 64px;
+  }
+  .team__username {
+    font-size: 20px;
+  }
+}
+
+// Max width 768px
+@media (max-width: 48em) {
+  .modal {
+    & .search-container {
+      max-width: 500px;
+    }
+    .btn-close {
+      font-size: 18px !important;
+    }
+    &__input {
+      font-size: 20px;
+      height: 60px;
+    }
+  }
+  .heading-primary {
+    font-size: 44px;
+    line-height: 50px;
+  }
+
+  .header {
+    &__img {
+      min-height: 620px;
+    }
+    &__content {
+      padding-top: 50px;
+    }
+  }
+
+  .strategy {
+    &__title {
+      font-size: 38px;
+    }
+  }
+}
+
+// Max width 576px
+@media (max-width: 36em) {
+  .heading-primary {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .heading-secondary {
+    font-size: 26px;
+  }
+  .triple__title {
+    font-size: 24px;
+  }
+  .header {
+    &__img {
+      min-height: 550px;
+    }
+    &__text {
+      padding-right: 80px;
+    }
+    & .owl-dots {
+      flex-direction: row;
+      justify-content: center;
+      bottom: 20px;
+      right: 0;
+      left: 0;
+    }
+  }
+  .btn:not(.btn-sm) {
+    padding: 16px 24px !important;
+  }
+  .story__btn-wrapper {
+    column-gap: 16px;
+  }
+  .progress {
+    &__container {
+      column-gap: 1.5rem;
+      row-gap: 2rem;
+    }
+  }
+  .finance {
+    & .nav-item {
+      width: 100%;
+    }
+    & .accordion {
+      &-button {
+        font-size: 18px;
+      }
+    }
+  }
+  .strategy,
+  .footer {
+    &__title {
+      font-size: 32px;
+    }
+  }
+  .testimonial {
+    & .owl-carousel .owl-dots {
+      margin-top: 0px !important;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "./navbar.scss";
+@import "./general.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+// Custom styles-----------------
+.header {
+  @include overlay("../images/banner2.jpg", top);
+}
+
+.blog-single {
+  &__container {
+    max-width: 800px !important;
+  }
+  &__author {
+    color: var(--bs-primary);
+  }
+
+  &__icon {
+    transition: all 0.2s ease;
+    &:hover {
+      color: var(--bs-primary) !important;
+    }
+  }
+  &__qoute {
+    padding: 30px !important;
+    .blockquote-footer {
+      font-size: 20px;
+    }
+    border-left-color: var(--bs-primary) !important;
+  }
+
+  &__socials {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: var(--bs-primary);
+      & span {
+        color: #fff !important;
+      }
+    }
+  }
+
+  &__nav {
+    transition: all 0.3s ease;
+    &:hover {
+      color: var(--bs-primary) !important;
+    }
+  }
+
+  &__comment {
+    margin: 60px 0;
+  }
+  &__comment-img {
+    width: 85px;
+    height: 85px;
+  }
+  &__form {
+    & textarea {
+      resize: none;
+      height: 150px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "./navbar.scss";
+@import "./general.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+// Custom styles-----------------
+.header {
+  @include overlay("../images/banner2.jpg", top);
+}
+
+.blog {
+  &__card {
+    transition: all 0.3s ease-in-out;
+    min-height: 550px;
+    &-img {
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover &-img {
+      transform: scale(1.1);
+    }
+    &-title {
+      font-size: 20px !important;
+      transition: all 0.2s ease;
+    }
+    &:hover &-title {
+      color: var(--bs-primary) !important;
+    }
+    &-title:hover {
+      opacity: 0.8;
+    }
+  }
+}

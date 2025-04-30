@@ -1,0 +1,326 @@
+@import "./navbar.scss";
+@import "./general.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+.owl-carousel .owl-dots .owl-dot.active span {
+  background-color: var(--bs-secondary) !important;
+}
+.owl-carousel .owl-dots .owl-dot {
+  padding: 1px 6px !important;
+  & span {
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #fff !important;
+    margin: 5px 1px !important;
+    &:hover {
+      background-color: var(--bs-secondary) !important;
+    }
+  }
+}
+
+// Custom styles-----------------
+.header {
+  &__img {
+    min-height: 720px;
+    &--1 {
+      @include overlay("../images/banner1.jpg", center);
+    }
+    &--2 {
+      @include overlay("../images/banner2.jpg", center);
+    }
+    &--3 {
+      @include overlay("../images/banner3.jpg", center);
+    }
+    &--4 {
+      @include overlay("../images/banner4.jpg", center);
+    }
+  }
+  & .owl-dots {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 12%;
+    bottom: 48%;
+    margin-top: 30px;
+  }
+
+  &__content {
+    padding-top: 80px;
+    max-width: 400px;
+  }
+
+  &__text {
+    letter-spacing: 1px;
+  }
+
+  &__btn:hover {
+    color: var(--bs-secondary);
+  }
+}
+
+.triple {
+  &__container:hover img {
+    transform: scale(1.1);
+  }
+  &__box img {
+    transition: all 0.3s ease;
+  }
+  &__info {
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.story {
+  &__stats {
+    margin-top: 64px;
+  }
+  & .progress {
+    &__circular {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: var(--bs-body-bg);
+        border-radius: 50%;
+      }
+      //* Static Progress bar with Css 👇
+      // &--95 {
+      //   background-image: conic-gradient(var(--bs-secondary) 342deg, var(--bs-border-color) 0deg);
+      // }
+      //* Static Progress bar with Css 👆
+    }
+    &__value {
+      font-size: 28px;
+      color: var(--bs-dark);
+    }
+    &__title {
+      font-size: 20px;
+      color: var(--bs-dark);
+    }
+  }
+}
+
+.video {
+  margin-bottom: -140px;
+  &__container {
+    width: 100%;
+    height: 468px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 0;
+      background: var(--bs-layer);
+      z-index: 2;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    video[poster] {
+      object-fit: cover;
+    }
+
+    & .video__btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 55px;
+      height: 55px;
+      z-index: 3;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease !important;
+      animation: ripple 4s linear infinite;
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      &-play-icon {
+        padding-left: 4px;
+      }
+    }
+
+    .paused {
+      animation: ripple 1s linear infinite;
+      & .video__btn-play-icon {
+        display: none;
+      }
+      & .video__btn-pause-icon {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.feature {
+  &__card:hover h4 {
+    transition: all 0.3s ease-in;
+    color: var(--bs-secondary);
+  }
+  &__icon {
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+  }
+}
+
+.finance {
+  & .nav-item {
+    width: 31.33%;
+  }
+  & .nav-link {
+    width: 100%;
+    color: var(--bs-dark);
+    transition: all 0.3s ease;
+    &.active {
+      background-color: var(--bs-primary);
+    }
+    &:hover {
+      box-shadow: inset 0 0 0 2px var(--bs-primary);
+    }
+  }
+
+  .nav-tab {
+    &__title,
+    &__item {
+      color: var(--bs-dark);
+    }
+    &__icon {
+      color: var(--bs-primary);
+    }
+  }
+
+  .accordion-button {
+    font-size: 20px;
+    &[aria-expanded="false"] {
+      color: var(--bs-dark);
+      padding: 20px;
+      &:hover {
+        color: var(--bs-primary) !important;
+      }
+    }
+
+    &::after {
+      color: inherit;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 22px;
+      background-color: currentColor;
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='' class='bi bi-plus-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z'/%3E%3C/svg%3E");
+    }
+
+    &:not(.collapsed)::after {
+      color: inherit;
+      mask-size: 22px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: currentColor;
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='' class='bi bi-dash-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1z'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+.banner {
+  &__content {
+    @include overlay("../images/banner1.jpg", center);
+  }
+}
+
+.blog {
+  &__card {
+    min-height: 550px;
+    &-img {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover &-img {
+      transform: scale(1.1);
+    }
+    &-title {
+      font-size: 20px !important;
+      transition: all 0.2s ease;
+    }
+    &:hover &-title {
+      color: var(--bs-primary) !important;
+    }
+    &-title:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.strategy {
+  @include overlay("../images/banner2.jpg", center);
+  &__title {
+    font-size: 54px;
+  }
+
+  &__feature {
+    &-title {
+      transition: all 0.2s ease;
+      &:hover {
+        color: var(--bs-secondary) !important;
+      }
+    }
+  }
+}
+
+.testimonial {
+  & .owl-carousel .owl-dots {
+    margin-top: 30px !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    & .owl-dot span {
+      background-color: var(--bs-dark) !important;
+      opacity: 0.5;
+      &:hover {
+        background-color: var(--bs-secondary) !important;
+        opacity: 1;
+      }
+    }
+    & .owl-dot.active span {
+      background-color: var(--bs-secondary) !important;
+      opacity: 1;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 65px;
+    font-weight: 900;
+    opacity: 0.2;
+  }
+  &__img-box {
+    width: 60px;
+  }
+  &__username {
+    font-size: 20px;
+  }
+}
+
+// Animations---------------
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255 255 255 / 25%), 0 0 0 10px rgb(255 255 255 / 25%), 0 0 0 20px rgb(255 255 255 / 25%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgb(255 255 255 / 25%), 0 0 0 20px rgb(255 255 255 / 25%), 0 0 0 40px rgba(50, 100, 245, 0);
+  }
+}

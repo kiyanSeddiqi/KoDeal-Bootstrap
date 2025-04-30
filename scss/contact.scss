@@ -1,0 +1,29 @@
+@import "./navbar.scss";
+@import "./general.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+// Custom styles-----------------
+.header {
+  @include overlay("../images/banner2.jpg", top);
+}
+
+.contact {
+  &__form {
+    textarea {
+      resize: none;
+      height: 200px;
+    }
+  }
+
+  &__info {
+    &-icon {
+      font-size: 20px;
+    }
+
+    &-link:hover {
+      text-decoration: underline;
+      color: #40ff27;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "./navbar.scss";
+@import "./footer.scss";
+@import "./general.scss";
+@import "./mixin.scss";
+
+// Custom styles-----------------
+.header {
+  @include overlay("../images/banner2.jpg", top);
+}
+
+.strategy {
+  @include overlay("../images/banner2.jpg", center);
+  &__title {
+    font-size: 54px;
+  }
+}
+
+.team {
+  &__username {
+    transition: all 0.2s ease;
+  }
+  &__card:hover &__username {
+    color: var(--bs-primary) !important;
+  }
+
+  &__icon-box {
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+  }
+  .image-container:hover &__icon-box {
+    opacity: 1;
+  }
+  &__icon {
+    width: 42px;
+    height: 42px;
+    line-height: 45px;
+    background: rgba(157, 157, 157, 0.5);
+    transition: all 0.4s ease;
+    &:hover {
+      background: var(--bs-white);
+      & i {
+        color: var(--bs-primary) !important;
+      }
+    }
+  }
+}
+
+.banner {
+  &__content {
+    @include overlay("../images/banner1.jpg", center);
+  }
+}

@@ -1,0 +1,59 @@
+@import "./navbar.scss";
+@import "./general.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+.header {
+  @include overlay("../images/banner2.jpg", top);
+}
+
+.service {
+  &__img {
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8 !important;
+    }
+  }
+}
+
+.idea {
+  &__container {
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: var(--bs-primary) !important;
+      & .idea__card > * {
+        color: #fff !important;
+      }
+    }
+  }
+  &__card-icon {
+    font-size: 34px;
+    color: var(--bs-primary);
+  }
+}
+
+.cta {
+  @include overlay("../images/banner3.jpg", center);
+
+  & .btn-outline-primary {
+    &:hover {
+      background-color: var(--bs-primary) !important;
+    }
+  }
+}
+
+.price {
+  &__card {
+    &-title {
+      font-size: 28px;
+    }
+    &-header {
+      inset: 0 0 0 0;
+      background-color: var(--bs-layer);
+    }
+    &-price {
+      font-size: 26px;
+      line-height: 60px !important;
+    }
+  }
+}

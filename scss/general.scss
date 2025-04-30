@@ -1,0 +1,31 @@
+// General
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.heading-primary {
+  font-weight: 400;
+  color: #fff;
+  line-height: 60px;
+  margin-bottom: 14px;
+}
+.heading-secondary {
+  font-weight: 400;
+  color: var(--bs-dark);
+  line-height: 48px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+.sub-heading {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: var(--bs-secondary);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn-primary:hover {
+  background-color: #0479e9 !important;
+  border-color: #0479e9;
+}

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KoDeal | About</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/all.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/fontawesome.css" />
+    <link rel="stylesheet" href="../css/media query.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top fs-6 py-lg-5 py-4">
+        <div class="container position-relative">
+          <a class="navbar-brand py-0 pe-9 me-0 fw-bold text-white" href="index.html"
+            >Ko<span class="text-secondary">Deal</span>
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse p-lg-0 p-5 mt-lg-0 mt-4" id="navbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="blog.html" class="nav-link dropdown-bs-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blog
+                  <i class="fa fa-angle-down dropdown-icon"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="blog.html">KoDeal blog</a></li>
+                  <li><a class="dropdown-item" href="blog-left-side.html">blog left sidebar</a></li>
+                  <li><a class="dropdown-item" href="blog-single.html">blog single post</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">contact</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav align-items-center justify-content-center row-gap-4">
+              <!-- Search button -->
+              <li class="nav-item" title="search">
+                <a
+                  href="#"
+                  class="navbar__search-icon p-0 rounded-circle d-block text-center text-white fs-5"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalSearch"
+                >
+                  <span class="fa-solid fa-magnifying-glass"></span>
+                </a>
+              </li>
+
+              <!-- Login Btn -->
+              <li class="nav-item mx-lg-6">
+                <a
+                  href="#"
+                  class="navbar__login-btn btn btn-outline-primary ms-lg-1 border-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalLogin"
+                >
+                  <span class="fa-solid fa-user me-1"></span>
+                  User Login
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Dark mode switch -->
+          <div class="theme__container d-flex align-items-center text-white" title="Theme">
+            <i class="theme-icon theme-icon__sun fa-light fa-sun-bright fs-3"> </i>
+            <i class="theme-icon theme-icon__moon fa-light fa-moon fs-3"> </i>
+          </div>
+        </div>
+      </nav>
+      <!-- Search Modal  -->
+      <div class="modal fade" id="modalSearch" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="search-container mx-auto position-relative">
+                <div class="d-grid justify-content-end">
+                  <button
+                    type="button"
+                    class="btn-close opacity-100 text-dark fs-4 me-5"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+
+                <div class="input-group input-group-lg mb-0 p-4">
+                  <input
+                    type="text"
+                    class="form-control py-3 px-5 modal__input bg-light"
+                    placeholder="Search..."
+                    aria-label="search box"
+                    aria-describedby="search-icon"
+                  />
+                  <span
+                    class="input-group-text text-white bg-primary border border-primary fs-4 py-0 px-sm-6 px-2"
+                    id="search-icon"
+                  >
+                    <i class="fa-solid fa-search"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Login Modal -->
+      <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="w-75 mx-auto text-center">
+                <h4 class="modal-title text-dark fw-semibold my-6 text-center" id="loginModalLabel">User Login Form</h4>
+                <input type="text" class="form-control form-control-lg fs-5 mb-4" placeholder="User Name" />
+                <input type="password" class="form-control form-control-lg fs-5 mb-4" placeholder="Password" />
+                <a href="#" class="fs-6 fw-semibold modal__link"> forgot password </a>
+              </form>
+            </div>
+            <div class="modal-footer border-top-0 justify-content-center">
+              <button type="button" class="btn btn-secondary px-6 py-2 text-white" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary px-6 py-2">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Breadcrumb -->
+      <div class="bread-crumb__container py-9 text-center">
+        <div class="container py-lg-9">
+          <nav aria-label="breadcrumb" class="pt-9 d-inline-block fs-6">
+            <ol class="breadcrumb py-1 px-5 mb-0 rounded align-items-center">
+              <li class="breadcrumb-item">
+                <a href="index.html" class="text-secondary fw-semibold">Home</a>
+              </li>
+              <i class="fa-solid fa-angles-right text-white mx-1"></i>
+              <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">About</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- About us-->
+      <section class="about-us py-9">
+        <div class="container py-lg-9">
+          <div class="row mb-9 align-items-center">
+            <div class="col-lg-6 pe-lg-9">
+              <div class="image-container">
+                <img src="../images/ab2.jpg" alt="desk" class="img-fluid rounded" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="text-container mt-lg-0 mt-9">
+                <h5 class="sub-heading mb-1">about us</h5>
+                <h2 class="heading-secondary about-us__title">
+                  We are a young and creative company and we offer you fresh <span class="fw-bold">business ideas</span>
+                </h2>
+                <p class="my-6 fs-5">
+                  Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu ullamcorper.
+                  Nunc id ipsum fringilla, gravida felis vitae. Phasellus lacinia id, sunt in culpa quis. Phasellus
+                  lacinia Excepteur sint occaecat non proident, sunt in culpa quis.
+                </p>
+                <div class="about-us__btn-wrapper">
+                  <a href="services.html" class="btn btn-primary mt-1"
+                    >read more
+                    <i class="fas fa-angle-double-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Strategy -->
+      <section class="strategy py-9">
+        <div class="container py-6">
+          <div class="row align-items-center">
+            <div class="col-lg-8 col-12 pe-lg-9 mb-lg-0 mb-9">
+              <div class="text-container mb-md-9">
+                <h5 class="sub-heading mb-1">who we are</h5>
+                <h2 class="fw-normal strategy__title text-white mb-0">
+                  The operational processes are what drives
+                  <span class="fw-bold">the business</span>
+                </h2>
+                <p class="strategy__text text-light opacity-75 mt-4 fs-5">
+                  Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.
+                  Lorem ipsum dolor sit amet elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet.Vivamus a et ut
+                  justo, init in dolor.
+                </p>
+                <a href="services.html" class="btn btn-primary mt-lg-9 mt-6">
+                  read more
+                  <i class="fas fa-angle-double-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="strategy__feature-box d-flex gap-5 mb-6">
+                <span class="strategy__feature-icon text-secondary">
+                  <i class="fa fa-lightbulb fa-3x"></i>
+                </span>
+                <div class="strategy__feature-info text-white">
+                  <a href="#">
+                    <h3 class="strategy__feature-title text-white mb-0">collect ideas</h3>
+                  </a>
+                  <p class="strategy__feature-text text-light opacity-75 mt-4 fs-5">
+                    Lorem ipsum dolor sit amet consectetur ipsum amet elit.
+                  </p>
+                </div>
+              </div>
+              <div class="strategy__feature-box d-flex gap-5 mb-6">
+                <span class="strategy__feature-icon text-secondary">
+                  <i class="fa fa-database fa-3x"></i>
+                </span>
+                <div class="strategy__feature-info text-white">
+                  <a href="#">
+                    <h3 class="strategy__feature-title text-white mb-0">data analysis</h3>
+                  </a>
+                  <p class="strategy__feature-text text-light opacity-75 mt-4 fs-5">
+                    Lorem ipsum dolor sit amet consectetur ipsum amet elit.
+                  </p>
+                </div>
+              </div>
+              <div class="strategy__feature-box d-flex gap-5">
+                <span class="strategy__feature-icon text-secondary">
+                  <i class="fa fa-chart-area fa-3x"></i>
+                </span>
+                <div class="strategy__feature-info text-white">
+                  <a href="#">
+                    <h3 class="strategy__feature-title text-white mb-0">Finalize Product</h3>
+                  </a>
+                  <p class="strategy__feature-text text-light opacity-75 mt-4 fs-5">
+                    Lorem ipsum dolor sit amet consectetur ipsum amet elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team -->
+      <section class="team py-9">
+        <div class="container py-lg-9">
+          <div class="team__heading text-center">
+            <h5 class="sub-heading mb-1">Passionate team</h5>
+            <h2 class="heading-secondary mb-6">Creative Minds Always <span class="fw-bold">Think Someting</span></h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-6 team__card text-center">
+              <div class="image-container position-relative">
+                <img src="../images/team1.jpg" alt="man" class="img-fluid rounded team__img" />
+                <div class="team__icon-box position-absolute">
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-linkedin-in"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <h3 class="fw-semibold mt-6">
+                <a href="#" class="text-dark team__username">luke jackobs</a>
+              </h3>
+              <p class="fw-normal fs-5">Founder</p>
+            </div>
+            <div class="col-lg-3 col-6 team__card text-center">
+              <div class="image-container position-relative">
+                <img src="../images/team3.jpg" alt="man" class="img-fluid rounded team__img" />
+                <div class="team__icon-box position-absolute">
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-linkedin-in"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <h3 class="fw-semibold mt-6">
+                <a href="#" class="text-dark team__username">claire olson</a>
+              </h3>
+              <p class="fw-normal fs-5">Manager</p>
+            </div>
+            <div class="col-lg-3 col-6 mt-lg-0 mt-9 team__card text-center">
+              <div class="image-container position-relative">
+                <img src="../images/team2.jpg" alt="man" class="img-fluid rounded team__img" />
+                <div class="team__icon-box position-absolute">
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-linkedin-in"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <h3 class="fw-semibold mt-6">
+                <a href="#" class="text-dark team__username">sara grant</a>
+              </h3>
+              <p class="fw-normal fs-5">Advisor</p>
+            </div>
+            <div class="col-lg-3 col-6 mt-lg-0 mt-9 team__card text-center">
+              <div class="image-container position-relative">
+                <img src="../images/team4.jpg" alt="man" class="img-fluid rounded team__img" />
+                <div class="team__icon-box position-absolute">
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="me-1 d-inline-block">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="">
+                    <span class="team__icon fs-6 rounded-circle d-inline-block text-center text-white">
+                      <i class="fab fa-linkedin-in"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <h3 class="fw-semibold mt-6">
+                <a href="#" class="text-dark team__username">philip hunt</a>
+              </h3>
+              <p class="fw-normal fs-5">HR</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Banner -->
+      <section class="banner pb-9">
+        <div class="container pb-9">
+          <div class="banner__content p-md-9 p-6 rounded">
+            <div class="row py-lg-6 px-lg-1 align-items-center">
+              <div class="col-lg-8 col-12 text-md-start text-center">
+                <h2 class="heading-secondary text-white">
+                  Request Free Consultation <br />
+                  and <span class="fw-bold">Lets Do It!</span>
+                </h2>
+              </div>
+              <div class="col-lg-4 mt-lg-0 mt-6 col-12 text-lg-end text-md-start text-center">
+                <a href="contact.html" class="btn btn-secondary text-white">
+                  contact now
+                  <i class="fas fa-angle-double-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer py-9 bg-black">
+      <div class="container py-lg-6">
+        <div class="row align-items-center mb-4">
+          <div class="col-lg-7 mb-lg-2 mb-5 text-lg-start text-center">
+            <h2 class="fw-bold footer__title text-white mb-0">
+              Join our community by using our services and grow your business.
+            </h2>
+          </div>
+          <div class="col-lg-5 ps-lg-9 text-lg-end text-center">
+            <a href="#" class="btn btn-secondary text-white">
+              try it for free
+              <i class="fas fa-angle-double-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row mt-md-9 mx-0">
+          <div class="col-lg-4 col-md-5 col-12 offset-lg-0 offset-md-1 text-md-start text-center pe-lg-9 mt-lg-0 mt-6">
+            <h3 class="footer__list-title mb-lg-6 mb-5 text-white fw-bold">About</h3>
+            <p class="footer__list-text fs-6 text-gray pe-lg-6">
+              Lorem ipsum dolor sit amet consectetur ipsum amet elit.Sit amet consectetur ipsum amet,Lorem ipsum dolor
+              sit amet.
+            </p>
+            <div class="footer__contact-info mt-6">
+              <h5 class="mb-2 fw-bold text-white">Get us Support</h5>
+              <h6 class="mb-2 fw-normal">
+                <a href="tel:+1(21) 234 557 456" class="text-gray footer__link">
+                  <i class="fa-solid fa-phone me-1"></i>
+                  +1(21) 234 557 456
+                </a>
+              </h6>
+              <h6 class="mb-2 fw-normal">
+                <a href="mailto:support@mail.com" class="text-gray footer__link">
+                  <i class="fa-regular fa-envelope me-1"></i>
+                  support@mail.com
+                </a>
+              </h6>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-5 offset-lg-0 offset-sm-1 mt-lg-0 mt-md-6 mt-8 text-sm-start text-center">
+            <h3 class="footer__list-title mb-lg-6 mb-5 text-white fw-bold">Links</h3>
+            <ul class="list-unstyled footer__list">
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">about us</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">our team</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">projects</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">careers</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">terms of use</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">privacy policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-5 offset-lg-0 offset-sm-1 mt-lg-0 mt-md-6 mt-8 text-sm-start text-center">
+            <h3 class="footer__list-title mb-lg-6 mb-5 text-white fw-bold">Services</h3>
+            <ul class="list-unstyled footer__list">
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">secure services</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">Digital arrange</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">Content strategy</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">Processing services</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">Web hosting</a>
+              </li>
+              <li class="footer__item mb-2">
+                <a href="#" class="footer__link text-gray fs-5">Page optimize</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-4 col-md-5 col-12 offset-lg-0 offset-md-1 mt-lg-0 mt-md-6 mt-8 ps-lg-9 px-sm-2 px-8 text-md-start text-center"
+          >
+            <h3 class="footer__list-title mb-lg-6 mb-5 text-white fw-bold">List Connected</h3>
+            <p class="footer__list-text fs-6 text-gray">Get Updates By Subscribe Our Weekly Newsletter</p>
+            <form action="#" class="footer__form position-relative mt-6">
+              <input
+                type="email"
+                class="footer__input form-control p-md-3 p-2 border-0 fs-6 fw-medium text-light"
+                placeholder="Your Email Address"
+              />
+              <button class="text-secondary footer__input-btn fs-5 border-0 bg-transparent">
+                <i class="fa fa-paper-plane footer__input-icon"></i>
+              </button>
+            </form>
+            <div class="mt-6 d-flex gap-2 row-gap-5 justify-content-center justify-content-md-start">
+              <button class="footer__icon text-white p-0 border-0 btn btn-secondary btn-sm">
+                <span class="fa-brands fa-facebook-f fs-6"></span>
+              </button>
+              <button class="footer__icon text-white p-0 border-0 btn btn-secondary btn-sm">
+                <span class="fa-brands fa-x-twitter fs-6"></span>
+              </button>
+              <button class="footer__icon text-white p-0 border-0 btn btn-secondary btn-sm">
+                <span class="fa-brands fa-instagram fs-5"></span>
+              </button>
+              <button class="footer__icon text-white p-0 border-0 btn btn-secondary btn-sm">
+                <span class="fa-brands fa-linkedin-in fs-6"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright mt-9 text-center">
+          <p class="text-gray fs-5">
+            &copy; All rights reserved. re designed by
+            <a href="#" class="text-white">Kiyan Seddighi</a> for educational purposes
+          </p>
+        </div>
+      </div>
+    </footer>
+    <button class="btn btn-sm btn-primary border-0 fs-6 go-top-btn p-3 position-fixed">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

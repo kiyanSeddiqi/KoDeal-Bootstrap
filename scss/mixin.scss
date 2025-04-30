@@ -1,0 +1,4 @@
+@mixin overlay($url, $pos) {
+  background: linear-gradient(var(--bs-layer), var(--bs-layer)), url($url) $pos no-repeat;
+  background-size: cover;
+}
