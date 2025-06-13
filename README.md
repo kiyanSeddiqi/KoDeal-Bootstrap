@@ -1,4 +1,4 @@
-## KoDeal (Bootstrap Project)  [Live Demo](https://kodeal-website.netlify.app/pages)
+# KoDeal (Bootstrap Project)  [Live Demo](https://kodeal-website.netlify.app/pages)
 
 > Owl carousel with Bootstrap components like accordion , navbar , pagination , card and so on were used in this project. 
  ### Features :
